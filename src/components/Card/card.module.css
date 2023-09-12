@@ -1,0 +1,36 @@
+.container {
+    perspective: 1000;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 3/4.2;
+}
+
+.flip {
+    position: relative;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    height: 100%;
+}
+
+.flip.back {
+    transform: rotateY(180deg);
+}
+
+.back {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    transform: rotateY(180deg);
+}
+
+.flip div {
+    backface-visibility: hidden;
+    border-radius: 30px;
+    height: 100%;
+}
